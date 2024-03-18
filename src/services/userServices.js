@@ -13,3 +13,9 @@ exports.updateUser = async (id, userData) => {
 exports.deleteUser = async (id) => {
   await User.findByIdAndDelete(id);
 };
+
+exports.resetPassword = async (id) => {
+  const user = await user.findByIdAndReset(id, userData, {new: true});
+};
+
+

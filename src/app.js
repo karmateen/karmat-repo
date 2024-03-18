@@ -4,6 +4,7 @@ const dotenv = require('dotenv');
 const mapRoutes = require('./routes/mapRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
 const chatRoutes = require('./routes/chatRoutes');
+const referralRoutes = require('./routes/referralRoutes.js');
 const authRoutes = require('./routes/authRoutes.js');
 const propertyRoutes = require('./routes/propertyRoutes.js');
 const userRoutes = require('./routes/userRoutes.js');
@@ -13,20 +14,23 @@ dotenv.config();
 
 const app = express();
 
+const PORT = process.env.PORT ;
+
 app.use(express.json());
 
 app.use('/auth', authRoutes);
 app.use('/properties', propertyRoutes);
 app.use('/users', userRoutes);
 app.use('/map', mapRoutes);
+app.use('/referrals', referralRoutes);
 app.use('/notifications', notificationRoutes);
 app.use('/chat', chatRoutes);
 
 app.use(globalErrorHandler);
 
-mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(process.env.DATABASE_URL,)
   .then(() => {
-    app.listen(process.env.PORT || 3000, () => {
+    app.listen(process.env.PORT, () => {
       console.log('Server is running');
     });
   })

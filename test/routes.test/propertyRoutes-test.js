@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app');
+const app = require('../app.js');
 
 describe('Property Routes', () => {
   it('should return 201 and the created property when creating a property', async () => {

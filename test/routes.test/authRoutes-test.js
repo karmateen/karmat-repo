@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app');
+const app = require('../app.js');
 
 describe('Auth Routes', () => {
   it('should return 200 and a token when logging in with valid credentials', async () => {

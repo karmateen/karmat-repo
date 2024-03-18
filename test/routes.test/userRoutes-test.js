@@ -1,5 +1,5 @@
 const request = require('supertest');
-const app = require('../app');
+const app = require('../app.js');
 
 describe('User Routes', () => {
   it('should return 201 and the created user when creating a user', async () => {
