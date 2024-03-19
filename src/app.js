@@ -1,9 +1,9 @@
 const express = require ('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const mapRoutes = require('./routes/mapRoutes');
+const mapRoutes = require('./routes/mapRoutes.js');
 const notificationRoutes = require('./routes/notificationRoutes');
-const chatRoutes = require('./routes/chatRoutes');
+const chatRoutes = require('./routes/chatRoutes.js');
 const referralRoutes = require('./routes/referralRoutes.js');
 const authRoutes = require('./routes/authRoutes.js');
 const propertyRoutes = require('./routes/propertyRoutes.js');
