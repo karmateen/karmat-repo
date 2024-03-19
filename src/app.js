@@ -12,6 +12,7 @@ const { globalErrorHandler } = require('./utils/errorHandlers.js');
 
 dotenv.config();
 
+
 const app = express();
 
 const PORT = process.env.PORT ;
